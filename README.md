@@ -22,8 +22,8 @@ This project demonstrates how an existing hybrid Selenium test suite can be refa
 - Flexible parameterization for different environments
 
 ✔️ Reporting  
-- Cucumber HTML report  
-- ExtentReports (Spark) via the Cucumber 7 Adapter
+- Cucumber HTML report: `target/cucumber-report.html`
+- ExtentReports (Spark) via the Cucumber 7 Adapter: `target/ExtentReport/ExtentSpark.html
 
 ---
 
@@ -54,7 +54,10 @@ Before running tests, ensure you have:
 
 > Update configuration in  
 > `src/test/resources/config.properties` — especially `execution_env`, `appURL`, and any credentials.
-
+## Notes
+- `config.properties` uses:
+  - `execution_env=local`
+  - `appURL=https://demo.nopcommerce.com/`
 ---
 
 ## ▶️ How to Run
