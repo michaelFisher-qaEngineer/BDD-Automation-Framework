@@ -1,36 +1,68 @@
-# CloudBerry - Hybrid Selenium to BDD (Cucumber) Framework
+# Hybrid to BDD Test Automation Framework
 
-## What’s included
-- Your existing **Hybrid framework core** reused:
-  - `testBase.BaseClass` (ThreadLocal driver, openApp/closeApp, screenshots)
-  - All `pageObjects.*`
-- Converted to **BDD**:
-  - 6 Feature files (TC01..TC06)
-  - Step Definitions
-  - Hooks (Before/After) integrated with BaseClass
-  - TestNG-based Cucumber Runner
-- **Extent Reports (Spark)** with Cucumber 7 Adapter
+A Selenium automation framework migrated from a classic **hybrid approach** to a **BDD (Behavior-Driven Development)** architecture using **Cucumber with Gherkin syntax**.
 
-## How to run
-From project root:
+This project demonstrates how an existing hybrid Selenium test suite can be refactored into a BDD-oriented framework — improving readability, collaboration, and reporting.
 
-```bash
-mvn test -Dos=windows -Dbrowser=chrome
-```
+---
 
-Defaults:
-- os=windows
-- browser=chrome
+## 🚀 What This Repo Includes
 
-Update credentials in:
-`src/test/resources/config.properties`
+✔️ Reuse of existing hybrid automation core:  
+- `testBase.BaseClass` for driver handling  
+- Page object implementations in `pageObjects.*`
 
-## Reports
-- Cucumber HTML: `target/cucumber-report.html`
-- Extent Spark: `target/ExtentReport/ExtentSpark.html`
+✔️ BDD Conversion  
+- Gherkin **.feature** files (6 high-level scenarios)  
+- Cucumber **Step Definitions** tied to the feature steps  
+- **Hooks** (Before/After) integrated with your BaseClass  
 
+✔️ Execution  
+- Cucumber + TestNG based runner  
+- Flexible parameterization for different environments
+
+✔️ Reporting  
+- Cucumber HTML report: `target/cucumber-report.html`
+- ExtentReports (Spark) via the Cucumber 7 Adapter: `target/ExtentReport/ExtentSpark.html
+
+---
+
+## 📦 Project Structure
+
+├── src
+│ ├── main
+│ │ └── java
+│ │ └── (stepdefs, hooks, etc.)
+│ └── test
+│ └── resources
+│ ├── features
+│ ├── config.properties
+├── testng.xml
+├── pom.xml
+└── README.md
+
+
+---
+
+## 🛠 Prerequisites
+
+Before running tests, ensure you have:
+
+- **Java JDK 11+**
+- **Maven**  
+- A browser driver (ChromeDriver, GeckoDriver, etc.) referenced in your PATH
+
+> Update configuration in  
+> `src/test/resources/config.properties` — especially `execution_env`, `appURL`, and any credentials.
 ## Notes
 - `config.properties` uses:
   - `execution_env=local`
   - `appURL=https://demo.nopcommerce.com/`
-- If you run remote execution, update BaseClass settings + any grid URL needed.
+---
+
+## ▶️ How to Run
+
+From the project root:
+
+```sh
+mvn test -Dos=windows -Dbrowser=chrome
