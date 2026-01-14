@@ -57,7 +57,7 @@ Before running tests, ensure you have:
 ## Notes
 - `config.properties` uses:
   - `execution_env=local`
-  - `appURL=https://demo.nopcommerce.com/`
+  - `appURL=https://cloudberrystore.services/`
 ---
 
 ## ▶️ How to Run

@@ -1,1 +1,17 @@
-/target/
+# ===== Maven =====
+target/
+*.log
+*.tmp
+
+# ===== Eclipse =====
+.classpath
+.project
+.settings/
+.metadata/
+
+# ===== OS junk =====
+.DS_Store
+
+# ===== IDEs =====
+.idea/
+*.iml
