@@ -2,6 +2,7 @@
 target/
 *.log
 *.tmp
+test-output/
 
 # ===== Eclipse =====
 .classpath
