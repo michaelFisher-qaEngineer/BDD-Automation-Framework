@@ -28,6 +28,7 @@ This project demonstrates how an existing hybrid Selenium test suite can be refa
 ---
 
 ## 📦 Project Structure
+```
 
 ├── src
 │ ├── main
@@ -40,7 +41,7 @@ This project demonstrates how an existing hybrid Selenium test suite can be refa
 ├── testng.xml
 ├── pom.xml
 └── README.md
-
+```
 
 ---
 
